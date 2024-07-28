@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
-        modifier = modifier.padding(8.dp)
+        modifier = modifier
     ) {
         Text(
             text = message,
@@ -62,7 +62,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
             fontSize = 26.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End)
+                .align(alignment = Alignment.CenterHorizontally)
         )
     }
 }
@@ -92,8 +92,8 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
         GreetingImage(
-            message = "Happy Birthday Lucero!",
-            from = "From Lucero"
+            message = stringResource(R.string.happy_birthday_text),
+            from = stringResource(R.string.signature_text)
         )
     }
 }
